@@ -63,11 +63,11 @@ namespace SGTest.DataImporter
             Department? parent = foundDepartment;
 
             Employee? foundEmployee = findEmployeeByFullname(columns[2]);
-           /* if (foundEmployee is null && columns[2] != string.Empty)
+           if (foundEmployee is null && columns[2] != string.Empty)
             {
-                
+                Console.Error.WriteLine($"Сотрудник `{columns[2]}` не найден");
                 //throw new ParseLineException($"Сотрудник `{columns[2]}` не найден");
-            }*/
+            }
             Employee? manager = foundEmployee;
             if (columns[3] == string.Empty)
             {
